@@ -24,7 +24,7 @@ from pyJoules.handler.csv_handler import CSVHandler
 
 # list of conditions
 SOURCE_CONDITION = "source_train"
-TARGET_CONDITIONS = ["source_valid","target"];
+TARGET_CONDITIONS = ["target"];
 
 
 def parse_args():
@@ -43,7 +43,7 @@ def parse_args():
 def register_datasets(args):
     register_coco_instances("source_train", {}, args.annos_dir + "/" + "source_train" + ".json", args.imgs_dir)
     register_coco_instances("source_valid", {}, args.annos_dir + "/" + "source_valid" + ".json", args.imgs_dir)
-    register_coco_instances("target", {}, args.annos_dir + "/" + "target" + ".json", args.imgs_dir)
+    register_coco_instances("target_train", {}, args.annos_dir + "/" + "target_train" + ".json", args.imgs_dir)
 
 
 def compute_domain_gap(cfg, projections_dir, current_data, new_data, n_samples = 1000):
@@ -160,7 +160,7 @@ def main():
     register_datasets(args);
 
     ######### setup directories ########
-    work_dir = "DGE-CDA"
+    work_dir = "DGE-CDA1"
     cfg.MODEL.WEIGHTS = work_dir + "/givendata/model_final.pth";
     work_dir += "/adapt_with_dge" if args.dge else "/adapt_wo_dge"
     model_dir = work_dir + "/givendata"

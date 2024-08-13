@@ -22,11 +22,11 @@ DATALOADER:
 
 DATASETS:
   TRAIN: ("source_train",)
-  TEST: ("target_train",)
+  TEST: ("test_test",)
 
 INPUT:
   MIN_SIZE_TRAIN: (0,)
   MIN_SIZE_TEST: 0
 
-OUTPUT_DIR: DGE-CDA/givendata/
+OUTPUT_DIR: givendata/
 

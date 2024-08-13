@@ -10,8 +10,8 @@ MODEL:
     FREEZE_AT: 2
 
 SOLVER:
-  STEPS: (3000,)
-  MAX_ITER: 6000
+  STEPS: (30000,)
+  MAX_ITER: 60000
   CHECKPOINT_PERIOD: 10000
   IMS_PER_BATCH: 4
   BASE_LR: 0.0002
@@ -22,7 +22,7 @@ DATALOADER:
 
 DATASETS:
   TRAIN: ("source_train",)
-  TEST: ("target_train",)
+  TEST: ("target",)
 
 INPUT:
   MIN_SIZE_TRAIN: (0,)
