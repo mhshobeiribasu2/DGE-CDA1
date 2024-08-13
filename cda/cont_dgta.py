@@ -24,7 +24,7 @@ from pyJoules.handler.csv_handler import CSVHandler
 
 # list of conditions
 SOURCE_CONDITION = "source_train"
-TARGET_CONDITIONS = ["target"];
+TARGET_CONDITIONS = ["target_train"];
 
 
 def parse_args():
